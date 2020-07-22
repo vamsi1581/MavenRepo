@@ -14,8 +14,8 @@ public class Test1 {
 
 	@BeforeMethod
 	public void setup() {
-		
-		WebDriverManager.firefoxdriver().setup();
+		System.setProperty("webdriver.gecko.driver", "C:\\Selenium\\Drivers\\geckodriver.exe");
+		//WebDriverManager.firefoxdriver().setup();
 		driver = new FirefoxDriver();
 	}
 
