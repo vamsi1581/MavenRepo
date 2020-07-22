@@ -1,5 +1,6 @@
 package mavenproject;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
@@ -21,6 +22,7 @@ public class Test1 {
 	@Test
 	public void login() {
 		driver.get("https://google.com");
+		driver.findElement(By.xpath("//input[@name='q']")).sendKeys("Automation");
 		System.out.println("Redirected to Google: Test is pass");
 	}
 
