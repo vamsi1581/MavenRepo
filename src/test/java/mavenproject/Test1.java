@@ -20,10 +20,11 @@ public class Test1 {
 	}
 
 	@Test
-	public void login() {
+	public void login() throws InterruptedException {
 		driver.get("https://google.com");
 		driver.findElement(By.xpath("//input[@name='q']")).sendKeys("Automation");
 		System.out.println("Redirected to Google: Test is pass");
+		Thread.sleep(3000);
 	}
 
 	@AfterMethod
